@@ -41,7 +41,7 @@ pets+=2;
 const allowedPets=3;
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!",
 // if it's not true, console log "How about we stay home?"
-if (adventurous==true){
+if (adventurous){
   console.log('Adventures are great!');
 }
 else{
@@ -118,7 +118,7 @@ console.log('How many pets do I have:',pets);
 console.log('I only need my pup neko! I give all other pets to friends');
 pets-=4;
 friendsPets+=4;
-console.log('number of pets:');
+console.log('number of pets:',pets);
 console.log('number of friends pets:',friendsPets);
 // STRETCH GOALS:
 
@@ -127,17 +127,29 @@ console.log('number of friends pets:',friendsPets);
 // assigns the highest value to `mostPets`. There's several possibilities --
 // be sure to think through all the scenarios.
 // console.log `mostPets` after the conditional has run.
-
 let mostPets;
 
 if (pets>friendsPets){
   mostPets=pets;
 }
 else if (friendsPets>pets){
-    mostPets=friendsPets;
+  mostPets=friendsPets;
 }
 
 console.log(mostPets);
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
+console.log('testing: i have more pets than friends pets');
 
+switch (pets>friendsPets) {
+  case true:
+  console.log('true');
+  mostPets=pets;
+  break;
+  case false:
+  console.log('false');
+  mostPets=friendsPets;
+  break;
+}
+
+console.log(mostPets);
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
